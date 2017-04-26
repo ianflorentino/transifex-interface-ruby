@@ -1,5 +1,4 @@
-# coding: utf-8
-require 'transifex/version'
+require File.expand_path('../lib/tx-ruby/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "tx-ruby"

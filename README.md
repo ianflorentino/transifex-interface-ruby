@@ -1,4 +1,4 @@
-# Transifex::Interface::Ruby
+# Tx-Ruby
 
 This gem is designed to interact easily with the Transifex API. You can perform all the actions allowed by the API. Documentation located here : http://docs.transifex.com/developer/api/
 
@@ -6,7 +6,7 @@ This gem is designed to interact easily with the Transifex API. You can perform 
 
 Add this line to your application's Gemfile:
 
-    gem 'transifex-interface-ruby'
+    gem 'tx-ruby'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install transifex-interface-ruby
+    $ gem install tx-ruby 
 
 ## Usage
 
