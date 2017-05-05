@@ -59,7 +59,12 @@ module Transifex
     res = Net::HTTP.start(uri.host, 80) do |http|
       req = Net::HTTP::const_get(method.capitalize).new(uri.request_uri, request_headers)
       req.basic_auth self.configuration.client_login, self.configuration.client_secret
-      req.body = Transifex::JSON.dump(params)
+      begin
+        req.body = Transifex::JSON.dump(params)
+      rescue Encoding::UndefinedConversionError
+        params[:content] = params[:content].force_encoding("utf-8")
+        req.body = Transifex::JSON.dump(params) 
+      end
       http.request req
     end
 
